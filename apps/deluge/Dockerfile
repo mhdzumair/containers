@@ -1,4 +1,4 @@
-FROM ghcr.io/elfhosted/alpine:3.19.1@sha256:3b987aa5e0134e99fdc3107e1fe4038cd6c5b93a6a73111e05556ffbae5be898
+FROM ghcr.io/elfhosted/alpine:3.19.4@sha256:1b2f62bae6b7f868c459a0e1db5ddbb3137e86cce20e90cfc9fa0f2e53c56c19
 
 ARG UNRAR_VERSION=6.1.7
 # set version label

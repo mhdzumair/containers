@@ -19,7 +19,7 @@ COPY --from=cloner /source/. .
 RUN apk add --no-cache bash git go gcc musl-dev curl fuse libxml2-utils
 RUN go build -ldflags "-s -w -X 'github.com/debridmediamanager/zurg/internal/version.BuiltAt=$BuiltAt' -X 'github.com/debridmediamanager/zurg/internal/version.GitCommit=$GitCommit' -X 'github.com/debridmediamanager/zurg/internal/version.Version=$Version'" -o zurg ./cmd/zurg
 
-FROM ghcr.io/elfhosted/alpine:3.19.1@sha256:afee25e18dd1ab956742f0c9a685c245dd9384348d2e00b0f54a3c69d272468f
+FROM ghcr.io/elfhosted/alpine:3.19.4@sha256:1b2f62bae6b7f868c459a0e1db5ddbb3137e86cce20e90cfc9fa0f2e53c56c19
 WORKDIR /app
 
 COPY --from=builder /app/zurg .
